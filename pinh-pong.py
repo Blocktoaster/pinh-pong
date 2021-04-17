@@ -2,7 +2,7 @@ from pygame import*
 from random import*
 
 window = display.set_mode((700,500))
-#
+
 display.set_caption("Ping Ping")
 ball = background = transform.scale(image.load("Trup.jpg"),(100,100))
 background = transform.scale(image.load("hqdefault.jpg"),(700,500))
