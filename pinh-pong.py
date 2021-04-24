@@ -16,7 +16,7 @@ class GameSprite(sprite.Sprite):
     def reset(self):
         window.blit(self.image, (self.rect.x,self.rect.y))
         
-            def upravlenie(self):
+    def upravlenie(self):
         keys_pressed = key.get_pressed()
         if keys_pressed[K_UP]:
             self.rect.y += 10
@@ -33,6 +33,6 @@ while game:
     for e in event.get():
         if e.type == QUIT:
             game = False
-    hero1.reset()
-    hero1.upravlenie()                
+    ball.reset()
+    ball.upravlenie()                
 
