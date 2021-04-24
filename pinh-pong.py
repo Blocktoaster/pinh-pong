@@ -14,6 +14,7 @@ class GameSprite(sprite.Sprite):
         self.rect.y = player_y
     def reset(self):
         window.blit(self.image, (self.rect.x,self.rect.y))
+
 class GameSprite2(sprite.Sprite):
     def __init__(self, player_image, player_x, player_y):
         super().__init__()
@@ -23,6 +24,7 @@ class GameSprite2(sprite.Sprite):
         self.rect.y = player_y
     def reset(self):
         window.blit(self.image, (self.rect.x,self.rect.y))
+
     def upravlenie(self):
         keys_pressed = key.get_pressed()
         if keys_pressed[K_DOWN]:
@@ -31,7 +33,7 @@ class GameSprite2(sprite.Sprite):
             self.rect.y -= 10
 
 ball =GameSprite('ball1.png', 350,250)
-palka = GameSprite2('palka.png',200,200)      
+palka = GameSprite2('palka.png',650,200)      
 
 dx = randint(-5,5)
 dy = randint(-5,5)
@@ -63,4 +65,4 @@ while game:
     palka.reset()
     palka.upravlenie()
     display.update()
-    clock.tick(60)
+    clock.tick(60)              
